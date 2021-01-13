@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>LAAS Shop</title>
+	
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		}
+		table.center {
+		  margin-left:auto; 
+		  margin-right:auto;
+		}
+	</style>
+</head>
+
+<body style="background-image:url('bg.png')">
+
+   <header style="padding-top:20px">
+        <!--start of top-header-->
+        <div class="top-header" style="background-color:white;">
+            <div class="left">
+               <span>Follow use on: <i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i></span>
+            </div>
+            <div class="right ml-auto">
+                <ul>
+                    <li><a href=""><i class="fas fa-bell"></i>&nbsp;Notification</a></li>	
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--end of top-header-->
+
+        <!--start of bottom-header-->
+        <div class="bottom-header">
+
+            <!--start of site-ifo-->
+            <div class="site-info">
+                <div class="logo" style="font-size: 50px;">
+					<a href="mainGuest.html" style="text-decoration: none;">
+                     <i class="fas fa-shopping-cart" style="color:black;"></i>
+                </div>
+                <div class="title">
+                    <h1 style="color:black;" >LASS Shop</h1></a>
+                </div>
+            </div>
+            <!--end of site-ifo-->
+
+            <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="search">
+			&nbsp;
+            <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="cart">
+				<a href="CartItem.html" style="color:black;">
+                 <i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+        </div>
+        <!--end of bottom-header-->
+
+    </header>
+
+<div STYLE="background-color:white">
+<br><br>
+	<table class="center" style="border: 1px solid black;border-collapse: collapse;">
+		<tr><td style="border: 1px solid black;border-collapse: collapse;">&nbsp;&nbsp;Total Price : <b></td>	
+			<td style="border: 1px solid black;border-collapse: collapse;">&nbsp;&nbsp;RM 200.00&nbsp;&nbsp;</td></tr>
+		<tr><td style="border: 1px solid black;border-collapse: collapse;">&nbsp;&nbsp;Tax : <b></td>			
+			<td style="border: 1px solid black;border-collapse: collapse;">&nbsp;&nbsp;RM 7.73&nbsp;&nbsp;</td></tr>
+		<tr><td style="border: 1px solid black;border-collapse: collapse;">&nbsp;&nbsp;Grand Total : <b></td>	
+			<td style="border: 1px solid black;border-collapse: collapse;">&nbsp;&nbsp;RM 207.73&nbsp;&nbsp;</td></tr>
+	</table><br></br>
+ 
+	<form STYLE="background-color:white">
+	<table class="center">
+		<tr><td>Payment Method : &nbsp;&nbsp;</td>	<td><input type="radio" value="Debit">Debit
+										&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="Credit">Credit</td></tr>
+		<tr><td>Card Number : &nbsp;&nbsp;</td>		<td><input type="text"></td></tr>
+		<tr><td>CVV : </td>				<td><input type="text"></td></tr>
+		<tr><td>Bank : </td>			<td><select name="bankType">
+											<option value="Maybank2U">Maybank2U</option>
+											<option value="CIMBClick">CIMBClick</option>
+											<option value="I-Muamalat">I-Muamalat</option>
+											<option value="Bank Islam">Bank Islam</option>
+											</select></td></tr>
+	</table>
+		
+		<br><a href="CartItem.html"><input type="button" 
+			style="font-size:20px; width:10%" value="Previous"></a>
+		<a href="mainGuest.html"><input type="button" class="btn btn-primary"
+			style="font-size:20px; float:right; width:10%" value="Save"></a>
+	</form>
+</div>
+
+</body></html>

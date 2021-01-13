@@ -1,0 +1,53 @@
+CREATE TABLE customer (
+username    varchar2(10),
+password    varchar2(10),
+emailAddr   varchar2(20),
+phoneNum    varchar2(20),
+billingAddr varchar2(50),
+
+CONSTRAINT customer_pk PRIMARY KEY (username)
+);
+
+
+CREATE TABLE product (
+productid    varchar2(10),
+productName  varchar2(50),
+productDesc  varchar2(100),
+productQty   number,
+productPrice number,
+
+CONSTRAINT product_pk PRIMARY KEY (productid));
+
+
+CREATE TABLE customer_product (
+username    varchar2(10),
+productid  varchar2(10),
+
+CONSTRAINT customer_product_pk PRIMARY KEY (username,productid),
+CONSTRAINT customer_product_fk1 FOREIGN KEY (username) REFERENCES customer(username),
+CONSTRAINT customer_product_fk2 FOREIGN KEY (productid) REFERENCES product(productid));
+
+
+CREATE TABLE shoppingCart (
+dateCreated     date,
+shoppingCartID  varchar2(10),
+productid       varchar2(10),
+productName     varchar2(50),
+productPrice    number,
+productQty      number,
+
+CONSTRAINT shoppingCart_pk PRIMARY KEY (shoppingCartID),
+CONSTRAINT shoppingCart_fk FOREIGN KEY (productid) REFERENCES product(productid));
+
+
+CREATE TABLE product_shoppingCart (
+productid       varchar2(10),
+shoppingCartID  varchar2(10),
+
+CONSTRAINT product_shoppingCart_pk PRIMARY KEY (productid,shoppingCartID),
+CONSTRAINT product_shoppingCart_fk1 FOREIGN KEY (productid) REFERENCES product(productid),
+CONSTRAINT product_shoppingCart_fk2 FOREIGN KEY (shoppingCartID) REFERENCES shoppingCart(shoppingCartID)
+);
+
+alter table product 
+add productImg varchar2(500);
